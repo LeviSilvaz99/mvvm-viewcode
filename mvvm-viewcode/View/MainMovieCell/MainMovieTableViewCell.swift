@@ -11,7 +11,7 @@ class MainMovieTableViewCell: UITableViewCell {
     
     static let identifier: String = "MainMovieTableViewCell"
     
-    let customView: MainMovieView = {
+    public let customView: MainMovieView = {
         let view = MainMovieView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isUserInteractionEnabled = true
@@ -27,6 +27,7 @@ class MainMovieTableViewCell: UITableViewCell {
         contentView.isUserInteractionEnabled = true
     }
     
+    
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -39,9 +40,5 @@ class MainMovieTableViewCell: UITableViewCell {
             customView.topAnchor.constraint(equalTo: self.topAnchor)
         ])
     }
-    
-    func configure() {
-    
-    }
-    
+
 }

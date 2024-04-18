@@ -6,14 +6,15 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MainMovieView: UIView {
     
     private lazy var bgView: UIView = {
         let v = UIView()
-        v.layer.cornerRadius = 8
+        v.layer.cornerRadius = 4
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = .clear
+        v.backgroundColor = .white
         return v
     }()
     
@@ -53,13 +54,23 @@ class MainMovieView: UIView {
             bgView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             bgView.topAnchor.constraint(equalTo: self.topAnchor),
             bgView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            bgView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            bgView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
             
-            title.leadingAnchor.constraint(equalTo: bgView.leadingAnchor, constant: 8),
+            mainMoviewImageView.leadingAnchor.constraint(equalTo: bgView.leadingAnchor, constant: 8),
+            mainMoviewImageView.bottomAnchor.constraint(equalTo: bgView.bottomAnchor),
+            mainMoviewImageView.topAnchor.constraint(equalTo: bgView.topAnchor, constant: 5),
+            mainMoviewImageView.widthAnchor.constraint(equalToConstant: 92),
+            
+            title.leadingAnchor.constraint(equalTo: mainMoviewImageView.trailingAnchor, constant: 8),
             title.centerYAnchor.constraint(equalTo: bgView.centerYAnchor),
             title.centerXAnchor.constraint(equalTo: bgView.centerXAnchor)
             
         ])
+    }
+    
+    public func setupCell(viewModel: MovieTableViewModel) {
+        self.title.text = viewModel.title
+        self.mainMoviewImageView.sd_setImage(with: viewModel.imageUrl)
     }
     
 }

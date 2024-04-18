@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     var viewModel: MainViewModel = MainViewModel()
     
     //variables
-    var cellDataSource: [Movie] = []
+    var cellDataSource: [MovieTableViewModel] = []
     
     //LifeCicle
     override func viewDidLoad() {
@@ -77,6 +77,17 @@ class ViewController: UIViewController {
         }
     }
     
+    func openDetail(movieId: Int) {
+        guard let movie = viewModel.retriveMovie(with: movieId) else {
+            return
+        }
+        
+        let detailsViewModel = DetailsMovieViewModel(movie: movie)
+        let detailsController = DetailsMovieViewController(viewModel: detailsViewModel)
+        self.navigationController?.pushViewController(detailsController, animated: true)
+        
+    }
+    
     private func setupUI() {
         self.view.backgroundColor = .green
         self.navigationItem.title = "main"
@@ -119,16 +130,22 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: MainMovieTableViewCell.identifier, for: indexPath) as? MainMovieTableViewCell
-        let movieData = cellDataSource[indexPath.row]
-//        cell.textLabel?.text = self.viewModel.getMovieTitle(movieData)
-        cell?.customView.title.text = self.viewModel.getMovieTitle(movieData)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MainMovieTableViewCell.identifier, for: indexPath) as? MainMovieTableViewCell else {
+            return UITableViewCell()
+        }
+        let cellViewModel = cellDataSource[indexPath.row]
+        cell.customView.setupCell(viewModel: cellViewModel)
         
-        return cell ?? UITableViewCell()
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movieId = cellDataSource[indexPath.row].id
+        self.openDetail(movieId: movieId)
     }
     
 }

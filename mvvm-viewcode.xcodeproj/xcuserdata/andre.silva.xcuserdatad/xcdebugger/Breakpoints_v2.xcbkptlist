@@ -86,54 +86,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E5A8F16E-2507-4B47-B7B5-AF2DEA55D540"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "mvvm-viewcode/View/MainMovieCell/MainMovieTableViewCell.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "init(style:reuseIdentifier:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E5A8F16E-2507-4B47-B7B5-AF2DEA55D540 - 3795ffde2aca173"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "mvvm_viewcode.MainMovieTableViewCell.__allocating_init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; mvvm_viewcode.MainMovieTableViewCell"
-                  moduleName = "mvvm-viewcode"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andre.silva/Desktop/mvvm-viewcode/mvvm-viewcode/View/MainMovieCell/MainMovieTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  uuid = "E5A8F16E-2507-4B47-B7B5-AF2DEA55D540 - 3c6fab4059bcfaa7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "mvvm_viewcode.MainMovieTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; mvvm_viewcode.MainMovieTableViewCell"
-                  moduleName = "mvvm-viewcode"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andre.silva/Desktop/mvvm-viewcode/mvvm-viewcode/View/MainMovieCell/MainMovieTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "76">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "4BC594DB-18E8-4EE0-80E9-7B893A4FE6F2"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -141,8 +93,8 @@
             filePath = "mvvm-viewcode/Controllers/MainViewController/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
