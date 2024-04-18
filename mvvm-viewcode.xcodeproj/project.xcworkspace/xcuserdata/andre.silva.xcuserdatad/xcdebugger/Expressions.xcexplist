@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ViewController.tableView(_:cellForRowAt:):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " cell?.customView.title.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MainViewModel.mapCellData():MainViewModel.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in ViewController.bindViewModel():ViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
